@@ -3,7 +3,7 @@ import { getSessionRequest } from '../stores/player/playerActions';
 import { devTools } from '../common/devTools';
 import { Service } from '../common/enum';
 
-const socketEndpoint: string = import.meta.env.VITE_SOCKET_ENDPOINT ?? 'localhost:8080';
+const socketEndpoint: string = import.meta.env.VITE_SOCKET_ENDPOINT ?? 'ws:localhost:8080';
 const socketRetryTime: number = Number(import.meta.env.VITE_SOCKET_RETRY_TIME) ?? 1000;
 
 export type MessageHandler = (msg: string) => void;
